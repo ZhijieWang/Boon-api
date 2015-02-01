@@ -1,5 +1,6 @@
 collection @deals
 attributes :id => :dealId, :category => :priceCategory, :description => :notes
+node(:expire){"December 17, 1995, 03:24:00"}
 #notes(:user) { attributes :full_name }
 #node(:read) { |post| post.read_by?(@user) }
 
