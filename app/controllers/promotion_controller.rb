@@ -1,12 +1,9 @@
 require 'geocoder'
 class PromotionController < ApplicationController
   def getbylocation
-    render :text=> request.location
-    # # @deals=  Shop.near(request.location).get(0);
-    # @deals = Shop.first.promotions();
-    # render "list"
-
-
+    # @deals=  Shop.near(request.location).get(0);
+    @deals = Shop.first.promotions()
+    render 'list'
   end
 end
 

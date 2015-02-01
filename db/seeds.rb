@@ -10,4 +10,6 @@ Shop.create!({name:"Heimingway's cafe", full_street_address:"3911 Forbes Avenue,
 
 Shop.first.promotions.create!(title:"Half Time Afternoon", description:"half price menu item", content: "2:00PM -- 4:00PM. 1 drink order or service fee may apply.", category:0)
 
+Shop.first.promotions.create!(title:"Half Time Afternoon", description:"half price menu item", content: "2:00AM -- 4:00AM. 1 drink order or service fee may apply.", category:0)
+
 Shop.create!({name:"Capital Grille", full_street_address:"Piatt Place, 301 Fifth Avenue, Pittsburgh, PA 15222"})
