@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150130182435) do
+ActiveRecord::Schema.define(version: 20150201183620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20150130182435) do
     t.string   "content"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "recurrence",  default: 0
+    t.string   "slot"
   end
 
   add_index "promotions", ["shop_id"], name: "index_promotions_on_shop_id", using: :btree
@@ -33,6 +35,8 @@ ActiveRecord::Schema.define(version: 20150130182435) do
     t.string   "full_street_address"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "users", force: :cascade do |t|
