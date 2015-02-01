@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150130182435) do
   enable_extension "plpgsql"
 
   create_table "promotions", force: :cascade do |t|
+    t.integer  "shop_id"
     t.string   "title"
     t.string   "description"
     t.integer  "category",    default: 0
@@ -24,6 +25,8 @@ ActiveRecord::Schema.define(version: 20150130182435) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
+
+  add_index "promotions", ["shop_id"], name: "index_promotions_on_shop_id", using: :btree
 
   create_table "shops", force: :cascade do |t|
     t.string   "name"
