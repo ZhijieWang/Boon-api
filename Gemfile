@@ -35,6 +35,7 @@ gem 'omniauth-google-oauth2'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rabl'
 # Also add either `oj` or `yajl-ruby` as the JSON parser
+gem 'rack-cors', :require => 'rack/cors'
 gem 'oj'
 group :development do
   gem "rails-erd",  github: 'ready4god2513/rails-erd', branch: 'rails-4.2-support-fix'
