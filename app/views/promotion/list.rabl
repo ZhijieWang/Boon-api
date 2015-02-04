@@ -1,7 +1,7 @@
 collection @deals
 attributes :id => :dealId, :category => :priceCategory, :description => :notes, :title => :name
-node(:startTime){"December 17, 1995, 01:24:00"}
-node(:endTime){"December 17, 1995, 03:24:00"}
+node(:startTime){"December 17, 1995 01:24:00"}
+node(:endTime){"December 17, 1995 03:24:00"}
 node(:imageUrl)  {"http://placehold.it/450x350"}
 #notes(:endTime) { attributes :full_name }
 #node(:read) { |post| post.read_by?(@user) }
