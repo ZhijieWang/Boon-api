@@ -17,6 +17,8 @@ gem 'bcrypt', '~> 3.1.2'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
+gem 'acts-as-taggable-on', '~> 3.4'
+gem 'ice_cube'
 
 # Use unicorn as the app server
 # gem 'unicorn'
