@@ -1,7 +1,6 @@
 require 'geocoder'
 class PromotionController < ApplicationController
   def getbylocation
-    # @deals=  Shop.near(request.location).get(0);
     if(Rails.env.development?)
       @deals = Shop.first.promotions()
     else
@@ -11,9 +10,7 @@ class PromotionController < ApplicationController
     render 'list'
   end
   private
-  def geo_params
-    params.require(:input)
-  end
+
 end
 
 # end{
