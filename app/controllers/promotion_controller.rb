@@ -1,10 +1,16 @@
 require 'geocoder'
 class PromotionController < ApplicationController
   def getbylocation
-    # @deals=  Shop.near(request.location).get(0);
-    render :json=> Shop.near([request.location.longitude, request.location.latitude], 10)
-    # render 'list'
+    if(Rails.env.development?)
+      @deals = Shop.first.promotions()
+    else
+      @deals = Shop.first.promotions()
+    end
+
+    render 'list'
   end
+  private
+
 end
 
 # end{

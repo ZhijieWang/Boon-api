@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 #x  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
- get "promotions" =>"promotion#getbylocation"
+ post "promotions" =>"promotion#getbylocation"
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
