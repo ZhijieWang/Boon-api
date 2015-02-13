@@ -38,6 +38,6 @@ module Boon
       end
     end
 
-
+    config.logger = Logger.new(STDOUT)
   end
 end
