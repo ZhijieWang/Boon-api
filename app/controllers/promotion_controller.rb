@@ -9,6 +9,9 @@ class PromotionController < ApplicationController
 
     render 'list'
   end
+  def tags
+    return  nil
+  end
   private
 
 end
