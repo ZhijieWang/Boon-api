@@ -35,7 +35,7 @@ gem 'omniauth-github'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'rack-cors', :require => 'rack/cors'
-gem 'rabl'
+gem 'jbuilder'
 # Also add either `oj` or `yajl-ruby` as the JSON parser
 gem 'oj'
 group :development do

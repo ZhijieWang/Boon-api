@@ -1,13 +1,34 @@
 require 'geocoder'
+require 'pp'
 class PromotionController < ApplicationController
   def getbylocation
-    if(Rails.env.development?)
-      @deals = Shop.first.promotions()
+#    Parameters: {"csrfToken"=>"1234567890", "latitude"=>-79.9514231, "longitude"=>-79.9514231, "timestamp"=>"Fri Feb 20 20151424490570814"}
+
+    @location = Hash.new()
+    if(params[:longitude].nil? || params[:latitude].nil?)
+      if(request.location.nil?)
+        @location[:longitude]= -79.9514231
+        @location[:latitude] = -79.9514231
+      else
+        @location[:longitude]= request.location.longitude
+        @location[:latitude] = request.location.latitude
+      end
     else
-      @deals = Shop.first.promotions()
+      @location[:longitude]= params[:longitude]
+      @location[:latitude] = params[:latitude]
     end
 
-    render 'list'
+    pp @location
+    # @deals = Shop.near([@location[:latitude],@location[:longitude]], 10000)
+    # pp @deals
+                 # .promotions
+  @deals = Shop.first.promotions()
+  @shops = Shop.all
+  @distance = Hash.new()
+  @shops.each do |shop|
+     @distance[shop.id] = shop.distance_from([@location[:latitude],@location[:longitude]])
+    end
+    render 'promotionList'
   end
   def tags
     return  nil
