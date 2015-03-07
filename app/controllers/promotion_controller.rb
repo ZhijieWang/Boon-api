@@ -33,7 +33,12 @@ class PromotionController < ApplicationController
   def tags
     return  nil
   end
-  private
+  def accept
+    return nil
+  end
+  def reject
+    return nil
+  end
 
 end
 

@@ -13,3 +13,7 @@ Shop.first.promotions.create!(title:"Half Time Afternoon", description:"half pri
 Shop.first.promotions.create!(title:"Half Time Afternoon", description:"half price menu item", content: "2:00AM -- 4:00AM. 1 drink order or service fee may apply.", category:0)
 
 Shop.create!({name:"Capital Grille", full_street_address:"Piatt Place, 301 Fifth Avenue, Pittsburgh, PA 15222"})
+
+Shop.first.tag_list.add("bar", "beer", "cheap", "awesome")
+Shop
+Shop.find(2).tag_list.add("grill", "classic", "expensive", "awesome")

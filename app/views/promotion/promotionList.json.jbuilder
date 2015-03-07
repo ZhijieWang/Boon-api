@@ -13,6 +13,7 @@ json.shops @shops do |shop|
   json.name = shop.name
   json.id = shop.id
   json.distance = @distance[shop.id]
+  json.tags shop.tags
 end
 
 # attributes :id => :dealId, :category => :priceCategory, :description => :notes, :title => :name
