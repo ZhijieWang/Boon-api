@@ -27,8 +27,8 @@ class PromotionController < ApplicationController
   @distance = Hash.new()
   @shops.each do |shop|
      @distance[shop.id] = shop.distance_from([@location[:latitude],@location[:longitude]])
-    end
-    render 'promotionList'
+  end
+    render :format => :json, :template => "promotion/promotionList.json.jbuilder"
   end
   def tags
     return  nil
