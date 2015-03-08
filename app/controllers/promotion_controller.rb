@@ -25,9 +25,14 @@ class PromotionController < ApplicationController
   @deals = Shop.first.promotions()
   @shops = Shop.all
   @distance = Hash.new()
+    @tags = []
   @shops.each do |shop|
+    @tags+=shop.tags
      @distance[shop.id] = shop.distance_from([@location[:latitude],@location[:longitude]])
   end
+
+
+
     render :format => :json, :template => "promotion/promotionList.json.jbuilder"
   end
   def tags

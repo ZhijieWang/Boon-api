@@ -1,4 +1,4 @@
-require 'geocoder'
+
 json.promotions  @deals do |deal|
   json.dealId deal.id
   json.pricecategory deal.category
@@ -15,6 +15,8 @@ json.shops @shops do |shop|
   json.distance = @distance[shop.id]
   json.tags shop.tags
 end
+
+json.tags @tags
 
 # attributes :id => :dealId, :category => :priceCategory, :description => :notes, :title => :name
 # node(:startTime){"April 17, 2025 01:24:00"}
