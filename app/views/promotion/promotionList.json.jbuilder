@@ -13,6 +13,8 @@ end
 json.shops @shops do |shop|
   json.name = shop.name
   json.id = shop.id
+  json.description "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, risus eget semper gravida, ligula quam pellentesque ante, ut suscipit est tortor eu mauris. Quisque ut neque odio. "
+  json.pictures = @images
   json.distance = @distance[shop.id]
   json.tags shop.tags
 end

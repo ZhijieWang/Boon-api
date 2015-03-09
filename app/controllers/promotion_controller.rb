@@ -1,5 +1,6 @@
 require 'geocoder'
 require 'pp'
+
 class PromotionController < ApplicationController
   def getbylocation
 #    Parameters: {"csrfToken"=>"1234567890", "latitude"=>-79.9514231, "longitude"=>-79.9514231, "timestamp"=>"Fri Feb 20 20151424490570814"}
@@ -24,6 +25,17 @@ class PromotionController < ApplicationController
                  # .promotions
   @deals = Shop.first.promotions()
   @shops = Shop.all
+  fiole = File.read(File.join(RAILS_ROOT, "app/assets/some_text_file.txt"))
+    file.gsub!(/\r\n?/, "\n")
+  @images = []
+  file.each_line do |line|
+    if(@images.size == 5)
+      break
+    end
+    if(Random.rand(2)>1)
+      @images<<line
+    end
+  end
   @distance = Hash.new()
     @tags = []
   @shops.each do |shop|
