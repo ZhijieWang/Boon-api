@@ -25,7 +25,7 @@ class PromotionController < ApplicationController
                  # .promotions
   @deals = Shop.first.promotions()
   @shops = Shop.all
-  fiole = File.read(File.join(RAILS_ROOT, "app/assets/some_text_file.txt"))
+  fiole = File.read(File.join(RAILS_ROOT, "app/assets/images.txt"))
     file.gsub!(/\r\n?/, "\n")
   @images = []
   file.each_line do |line|
