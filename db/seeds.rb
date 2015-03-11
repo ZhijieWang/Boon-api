@@ -28,4 +28,4 @@ Shop.find(3).promotions.create!(title:"Free 1 extra topping", description:"1 ext
 
 Shop.create!(name:"Hello Bistro", full_street_address:"3605 Forbes Ave, Pittsburgh, PA 15213" )
 Shop.find(4).tag_list.add("medium", "fancy", "milk shake")
-Shod.find(4).promotions.create!(title:"10% off on milk shakes", description:"10% discount milk shake when you buy any meal", content:"monthly", category:3)
+Shop.find(4).promotions.create!(title:"10% off on milk shakes", description:"10% discount milk shake when you buy any meal", content:"monthly", category:3)
