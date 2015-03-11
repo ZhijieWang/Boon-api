@@ -21,7 +21,7 @@ Shop.find(2).promotions.create!(title:"30% off Steak", description:"special deal
 Shop.find(2).promotions.create!(title:"30% off Steak", description:"special deals on fresh steak", content:"7:00 pm 9:00 pm ", category:2)
 Shop.find(2).promotions.create!(title:"30% off Steak", description:"special deals on fresh steak", content:"7:00 pm 9:00 pm ", category:2)
 
-Shop.ceate!({name:"Five Guys", full_street_address:"117 S Bouquet St, Pittsburgh, PA 15213 (University of Pittsburgh)"}
+Shop.ceate!({name:"Five Guys", full_street_address:"117 S Bouquet St, Pittsburgh, PA 15213 (University of Pittsburgh)"})
 Shop.find(3).tag_list.add("fast food", "delicious", "unhealthy")
 Shop.find(3).promotions.create!(title:"Customer appreciation day", description:"free drink", content:"one day only", category:2)
 Shop.find(3).promotions.create!(title:"Free 1 extra topping", description:"1 extra topping on the house", content:"one day only", category:2)
