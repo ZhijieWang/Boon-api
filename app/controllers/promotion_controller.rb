@@ -26,16 +26,19 @@ class PromotionController < ApplicationController
   @deals = Shop.first.promotions()
   @shops = Shop.all
   file = File.read(File.join(Rails.root, "app/assets/images.txt"))
-    file.gsub!(/\r\n?/, "\n")
+  file.gsub!(/\r\n?/, "\n")
   @images = []
   file.each_line do |line|
+
     if(@images.size == 5)
       break
     end
-    if(Random.rand(2)>1)
+    if(Random.rand(2)==1)
       @images<<line
     end
   end
+    print "images"
+    print @images
   @distance = Hash.new()
     @tags = []
   @shops.each do |shop|
