@@ -26,6 +26,6 @@ Shop.find(3).tag_list.add("fast food", "delicious", "unhealthy")
 Shop.find(3).promotions.create!(title:"Customer appreciation day", description:"free drink", content:"one day only", category:2)
 Shop.find(3).promotions.create!(title:"Free 1 extra topping", description:"1 extra topping on the house", content:"one day only", category:2)
 
-Shop.create!(name:"Hello Bistro", full_street_address:"3605 Forbes Ave, Pittsburgh, PA 15213"} )
+Shop.create!(name:"Hello Bistro", full_street_address:"3605 Forbes Ave, Pittsburgh, PA 15213" )
 Shop.find(4).tag_list.add("medium", "fancy", "milk shake")
 Shod.find(4).promotions.create!(title:"10% off on milk shakes", description:"10% discount milk shake when you buy any meal", content:"monthly", category:3)
