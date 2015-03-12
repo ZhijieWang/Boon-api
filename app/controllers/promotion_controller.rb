@@ -23,7 +23,7 @@ class PromotionController < ApplicationController
     # @deals = Shop.near([@location[:latitude],@location[:longitude]], 10000)
     # pp @deals
                  # .promotions
-  @deals = Shop.first.promotions()
+  @deals = Promotion.all
   @shops = Shop.all
   file = File.read(File.join(Rails.root, "app/assets/images.txt"))
   file.gsub!(/\r\n?/, "\n")
