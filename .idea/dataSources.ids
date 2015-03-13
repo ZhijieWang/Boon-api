@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="SQLite -" uuid="1cb3077e-9414-49cf-90b8-2df3f99f53f3">
+    <database-info product="SQLite" version="3.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="PROMOTIONS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="shop_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="category" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="recurrence" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="slot" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SCHEMA_MIGRATIONS" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="SHOPS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="full_street_address" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="latitude" sqlType="FLOAT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="longitude" sqlType="FLOAT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SQLITE_SEQUENCE" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="TAGGINGS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="tag_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="taggable_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="taggable_type" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="tagger_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="tagger_type" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="context" sqlType="VARCHAR(128)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="TAGS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="taggings_count" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="USERS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="provider" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="uid" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="encrypted_password" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="reset_password_token" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="reset_password_sent_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="remember_created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="sign_in_count" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="current_sign_in_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="last_sign_in_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="current_sign_in_ip" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="last_sign_in_ip" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="confirmation_token" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="confirmed_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="confirmation_sent_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="unconfirmed_email" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="nickname" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="image" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="tokens" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+  </data-source>
+  <data-source name="Rails boon: development" uuid="2e6bf00b-94fe-46b8-a940-d6d0190f1064">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails boon: test" uuid="b2f16858-ea1e-4795-aaaf-7f1ace917e0d">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

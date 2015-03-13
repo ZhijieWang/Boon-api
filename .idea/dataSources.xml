@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1780828287">
+    <data-source source="LOCAL" name="SQLite -" uuid="1cb3077e-9414-49cf-90b8-2df3f99f53f3">
+      <driver-ref>sqlite.zentus</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/boon_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails boon: development" uuid="2e6bf00b-94fe-46b8-a940-d6d0190f1064">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\bill\VMs\rails-dev-box\boon\boon_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails boon: test" uuid="b2f16858-ea1e-4795-aaaf-7f1ace917e0d">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\bill\VMs\rails-dev-box\boon\boon_test</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

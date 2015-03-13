@@ -37,12 +37,10 @@ class PromotionController < ApplicationController
       @images<<line
     end
   end
-    print "images"
-    print @images
   @distance = Hash.new()
-    @tags = []
+    @tags = Shop.tag_counts
   @shops.each do |shop|
-    @tags+=shop.tags
+    # print shop
      @distance[shop.id] = shop.distance_from([@location[:latitude],@location[:longitude]])
   end
 
