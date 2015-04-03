@@ -18,27 +18,15 @@ class PromotionController < ApplicationController
       @location[:longitude]= params[:longitude]
       @location[:latitude] = params[:latitude]
     end
-
-    pp @location
     # @deals = Shop.near([@location[:latitude],@location[:longitude]], 10000)
     # pp @deals
                  # .promotions
   @deals = Promotion.all
   @shops = Shop.all
-  file = File.read(File.join(Rails.root, "app/assets/images.txt"))
-  file.gsub!(/\r\n?/, "\n")
   @images = []
-  file.each_line do |line|
 
-    if(@images.size == 5)
-      break
-    end
-    if(Random.rand(2)==1)
-      @images<<line
-    end
-  end
   @distance = Hash.new()
-    @tags = Shop.tag_counts
+  @tags = Shop.tag_counts
   @shops.each do |shop|
     # print shop
      @distance[shop.id] = shop.distance_from([@location[:latitude],@location[:longitude]])

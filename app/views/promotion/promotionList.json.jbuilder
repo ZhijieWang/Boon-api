@@ -1,20 +1,18 @@
-
+time = Time.new
 json.promotions  @deals do |deal|
   json.dealId deal.id
   json.pricecategory deal.category
   json.notes deal.description
   json.name deal.title
   json.shopId deal.shop_id
-  json.startTime "April 17, 2025 01:24:00"
-  json.endTime "April 17, 2015 03:24:00"
-  json.description "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, risus eget semper gravida, ligula quam pellentesque ante, ut suscipit est tortor eu mauris. Quisque ut neque odio. "
-  json.imageUrl "http://lorempixel.com/450/350/"
+  json.startTime time.month.to_s+ " " + time.day.to_s+ " ,"+time.year.to_s+" 00:00:00"
+  json.endTime time.month.to_s+ " " + time.day.to_s+ " ,"+time.year.to_s+" 23:59:59"
+  json.imageUrl deal.shop.pictures[0]
 end
 json.shops @shops do |shop|
   json.name  shop.name
   json.id  shop.id
-  json.description "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, risus eget semper gravida, ligula quam pellentesque ante, ut suscipit est tortor eu mauris. Quisque ut neque odio. "
-  json.pictures  @images
+  json.pictures  shop.pictures
   json.distance  @distance[shop.id]
   json.tags shop.tags
 end

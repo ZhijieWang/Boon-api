@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="SQLite -" uuid="1cb3077e-9414-49cf-90b8-2df3f99f53f3">
+    <data-source name="PostgreSQL - boon@localhost" uuid="1adb90b0-b261-4d52-a20d-749d508d9b54">
       <secret-storage>master_key</secret-storage>
-    </data-source>
-    <data-source name="Rails boon: development" uuid="2e6bf00b-94fe-46b8-a940-d6d0190f1064">
-      <first-sync>true</first-sync>
-    </data-source>
-    <data-source name="Rails boon: test" uuid="b2f16858-ea1e-4795-aaaf-7f1ace917e0d">
-      <first-sync>true</first-sync>
+      <user-name>postgres</user-name>
+      <schema-pattern>boon.pg_catalog boon.public</schema-pattern>
+      <default-schemas>boon.pg_catalog boon.public</default-schemas>
     </data-source>
   </component>
 </project>
